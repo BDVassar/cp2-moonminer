@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>
+  </title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style>
+    body.debug .container,
+    body.debug .container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    }
+
+    body.debug .row {
+      outline: 2px dashed red;
+      outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;
+    }
+  </style>
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="container-fluid body-md">
+
+  <header class="container-fluid">
+    <!-- place navbar here -->
+    <section class="row text-center title-ft justify-content-between g-4 text-light flex-fill">
+      <div class="col-12 col-md-6 ">
+        <h1>Total Antimatter</h1>
+        <h1 id="totalAntiMatter"></h1>
+      </div>
+      <div class="col-12 col-md-6">
+        <h1>Cups of Coffee</h1>
+        <h1 id="totalCoffee"></h1>
+    </section>
+    </section>
+  </header>
+
+  <main class="container-fluid">
+    <section class="row justify-content-center align-items-center rowHeight">
+      <img class="nebula img-fluid"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Translucent_Helix_Nebula.png/1200px-Translucent_Helix_Nebula.png"
+        alt="" onclick="getAntimatter()">
+    </section>
+    <section class="row justify-content-between btn-row-height">
+      <div class="col-12 col-md-4 ">
+        <section class="row align-items-center justify-content-evenly">
+          <div class="col-6">
+            <div class="card justify-content-between flex-row p-1" onclick="upgradeClick('deflector')">Upgrade Deflector
+              <span id="deflectorcost"></span>
+            </div>
+            <p class="text-light">
+              Deflector Lvl: <span id="deflectorQuantity">
+              </span>
+            </p>
+            <p>
+            <div class="card justify-content-between flex-row p-1" onclick="upgradeClick('sensors')">Upgrade Sensors
+              <span id="sensorscost"></span>
+            </div>
+            </p>
+            <p class="text-light">
+              Sensor Lvl: <span id="sensorsQuantity"></span>
+            </p>
+            <h4 class="text-light">Total Click upgrade: <span id="totalClick"></span></h4>
+          </div>
+          <div class="col-6">
+            <p>
+            <div class="card justify-content-between flex-row p-1" onclick="upgradeAutomatic('shuttle')">Launch Shuttle
+              <span id="shuttlecost"></span>
+            </div>
+            </p>
+            <p class="text-light">
+              Shuttles: <span id="shuttleQuantity"></span>
+            </p>
+            <p>
+            <div class="card justify-content-between flex-row p-1" onclick="upgradeAutomatic('torres')">Summon Chief
+              Engineer Torres
+              <span id="torrescost"></span>
+            </div>
+            </p>
+            <p class="text-light">
+              Chief Engineer Lvl: <span id="torresQuantity"></span>
+            </p>
+            <h4 class="text-light">Total Automatic upgrades: <span id="autoUpgrade"></span></h4>
+          </div>
+        </section>
+      </div>
+      <div class="d-flex col-12 col-md-4 flex-column align-items-start justify-content-evenly">
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+  <script src="app.js"></script>
+</body>
+
+</html>
