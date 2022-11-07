@@ -1,8 +1,9 @@
 
-let antiMatter = 10000
+let antiMatter = 0
 let cupsCoffee = 0
 let clickAmount = 1
 let automaticAmount = 0
+let sound = new Audio('1x06-voy-04.mp3')
 
 
 const clickUpgrades = [
@@ -83,7 +84,7 @@ function upgradeAutomatic(clickUpgrade) {
     automaticAmount += selected.multiplier
     antiMatter -= selected.price
     selected.quantity++
-    selected.price += (Math.floor(selected.price * .5))
+    selected.price += (Math.floor(selected.price * .2))
     let autoWork = setInterval(() => {
       antiMatter += automaticAmount
       update()
@@ -97,5 +98,5 @@ function upgradeAutomatic(clickUpgrade) {
   update()
 }
 
-
+sound.play()
 update()

@@ -40,8 +40,8 @@
 <body class="container-fluid body-md">
 
   <header class="container-fluid">
-    <!-- place navbar here -->
-    <section class="row text-center title-ft justify-content-between g-4 text-light flex-fill">
+    <!-- SECTION totals-->
+    <section class="row text-center title-ft justify-content-between g-4 text-light flex-fill noSelect">
       <div class="col-12 col-md-6 ">
         <h1>Total Antimatter</h1>
         <h1 id="totalAntiMatter"></h1>
@@ -49,56 +49,56 @@
       <div class="col-12 col-md-6">
         <h1>Cups of Coffee</h1>
         <h1 id="totalCoffee"></h1>
-    </section>
+      </div>
     </section>
   </header>
 
   <main class="container-fluid">
+    <!-- SECTION view screen -->
     <section class="row justify-content-center align-items-center rowHeight">
-      <img class="nebula img-fluid"
+      <img class="nebula img-fluid noSelect"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Translucent_Helix_Nebula.png/1200px-Translucent_Helix_Nebula.png"
         alt="" onclick="getAntimatter()">
     </section>
-    <section class="row justify-content-between btn-row-height">
-      <div class="col-12 col-md-4 ">
-        <section class="row align-items-center justify-content-evenly">
-          <div class="col-6">
-            <div class="card justify-content-between flex-row p-1" onclick="upgradeClick('deflector')">Upgrade Deflector
+    <!-- ANCHOR control panel -->
+    <section class="row justify-content-between btn-row-height align-items-center">
+      <div id='controlPanel' class="col-12 col-md-4">
+        <section class="row align-items-center justify-content-evenly p-2">
+          <!-- SECTION Click upgrades -->
+          <div class="col-6 noSelect">
+            <div class=" icarBlue card justify-content-between flex-row p-1" onclick="upgradeClick('deflector')">Upgrade
+              Deflector
               <span id="deflectorcost"></span>
             </div>
-            <p class="text-light">
-              Deflector Lvl: <span id="deflectorQuantity">
-              </span>
+            <p class="text-dark icarBlue rounded p-1">
+              Deflector Lvl: <span id="deflectorQuantity"></span>
             </p>
-            <p>
-            <div class="card justify-content-between flex-row p-1" onclick="upgradeClick('sensors')">Upgrade Sensors
+            <div class="icarOrange card justify-content-between flex-row p-1" onclick="upgradeClick('sensors')">Upgrade
+              Sensors
               <span id="sensorscost"></span>
             </div>
-            </p>
-            <p class="text-light">
+            <p class="text-dark icarOrange rounded p-1">
               Sensor Lvl: <span id="sensorsQuantity"></span>
             </p>
-            <h4 class="text-light">Total Click upgrade: <span id="totalClick"></span></h4>
+            <h4 class="text-dark icarYellow rounded p-1">Total Click upgrade: <span id="totalClick"></span></h4>
           </div>
-          <div class="col-6">
-            <p>
-            <div class="card justify-content-between flex-row p-1" onclick="upgradeAutomatic('shuttle')">Launch Shuttle
+          <!-- SECTION Automatic upgrades -->
+          <div class="col-6 noSelect">
+            <div class="icarPurple card justify-content-between flex-row p-1" onclick="upgradeAutomatic('shuttle')">
+              Launch Shuttle
               <span id="shuttlecost"></span>
             </div>
-            </p>
-            <p class="text-light">
+            <p class="icarPurple text-dark rounded p-1">
               Shuttles: <span id="shuttleQuantity"></span>
             </p>
-            <p>
-            <div class="card justify-content-between flex-row p-1" onclick="upgradeAutomatic('torres')">Summon Chief
-              Engineer Torres
+            <div class=" icarRed card justify-content-between flex-row p-1" onclick="upgradeAutomatic('torres')">Summon
+              Torres
               <span id="torrescost"></span>
             </div>
-            </p>
-            <p class="text-light">
+            <p class="icarRed text-dark rounded p-1">
               Chief Engineer Lvl: <span id="torresQuantity"></span>
             </p>
-            <h4 class="text-light">Total Automatic upgrades: <span id="autoUpgrade"></span></h4>
+            <h4 class="icargreen text-dark rounded p-1">Total Auto upgrade: <span id="autoUpgrade"></span></h4>
           </div>
         </section>
       </div>

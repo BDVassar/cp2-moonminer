@@ -17,6 +17,11 @@
   }
 }
 
+.shuttle {
+  transition: ease-in-out;
+  transition: linear;
+}
+
 header {
   height: 22vh;
 }
@@ -29,8 +34,6 @@ header {
   height: 18vh
 }
 
-
-
 .nebula {
   height: 40vh;
   width: 40vh;
@@ -39,4 +42,37 @@ header {
 
 .title-ft {
   font-family: 'Permanent Marker', cursive;
+}
+
+#controlPanel {
+  border-radius: 10pt;
+  background-color: #000000;
+}
+
+.icarBlue {
+  background-color: #3399ff;
+}
+
+.icarOrange {
+  background-color: #ff9000;
+}
+
+.icarYellow {
+  background-color: #f5ed00;
+}
+
+.icarPurple {
+  background-color: #9c9cff;
+}
+
+.icarRed {
+  background-color: #cd6363;
+}
+
+.icargreen {
+  background-color: #ffffcc;
+}
+
+.noSelect {
+  user-select: none;
 }
